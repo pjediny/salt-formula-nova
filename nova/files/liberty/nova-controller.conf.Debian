@@ -87,6 +87,7 @@ osapi_compute_workers = {{ controller.workers }}
 
 #NoVNC
 vnc_enabled=true
+novncproxy_host = 0.0.0.0
 {%- if pillar.nova.compute is defined %}
 vncserver_listen={{ controller.bind.private_address }}
 vncserver_proxyclient_address={{ controller.bind.private_address }}
